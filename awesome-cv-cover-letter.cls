@@ -21,7 +21,7 @@
 %-------------------------------------------------------------------------------
 %                Identification
 %-------------------------------------------------------------------------------
-\ProvidesClass{awesome-cv}[2015/12/14 v1.3 Awesome Curriculum Vitae Class]
+\ProvidesClass{awesome-cv-cover-letter}[2015/12/14 v1.3 Awesome Curriculum Vitae Class]
 \NeedsTeXFormat{LaTeX2e}
 
 
@@ -113,7 +113,7 @@
 %-------------------------------------------------------------------------------
 %% Page Layout
 % Configure page margins with geometry
-\geometry{left=1.0in, top=1.0in, right=1.0in, bottom=1.0in, footskip=.5cm}
+\geometry{left=1.0in, top=0.7in, right=1.0in, bottom=1.0in, footskip=.5cm}
 
 %% Header & Footer
 % Set offset to each header and offset
@@ -226,11 +226,11 @@
 
 \newfontfamily\sectionsubheaderfont[
   Path=\@fontdir,
-  UprightFont=*-Light,
-  ItalicFont=*-LightIt,
-  BoldFont=*-Semibold,
-  BoldItalicFont=*-SemiboldIt
-]{SourceSansPro}
+  UprightFont=*-Regular,
+  ItalicFont=*-Italic,
+  BoldFont=*-Bold,
+  BoldItalicFont=*-Bold,
+]{Roboto}
 
 % \newfontfamily\bodyfont[
 %   Path=\@fontdir,
@@ -242,11 +242,11 @@
 
 \newfontfamily\bodyfont[
   Path=\@fontdir,
-  UprightFont=*-Light,
-  ItalicFont=*-LightIt,
-  BoldFont=*-Semibold,
-  BoldItalicFont=*-SemiboldIt
-]{SourceSansPro}
+  UprightFont=*-Regular,
+  ItalicFont=*-Italic,
+  BoldFont=*-Bold,
+  BoldItalicFont=*-Bold,
+]{Roboto}
 
 \newfontfamily\headerfontlight[
   Path=\@fontdir,
@@ -259,10 +259,9 @@
 % Set font for footer (default is Source Sans Pro)
 \newfontfamily\footerfont[
   Path=\@fontdir,
-  UprightFont=*-Light,
-  ItalicFont=*-LightIt,
-  BoldFont=*-Semibold,
-  BoldItalicFont=*-SemiboldIt
+  UprightFont=*-Regular,
+  ItalicFont=*-It,
+  BoldFont=*-Bold
 ]{SourceSansPro}
 
 % Set font for body (default is Source Sans Pro)
@@ -480,7 +479,7 @@
     %   % \cs{ORIOL}
     % }
     % \\
-    % % \vspace{2mm}
+    % \vspace{-10mm}
     % \hspace{1mm}
     % \headerlastnamestyle{
     %   % \@lastname
@@ -582,7 +581,6 @@
       {\vspace{5.0mm}}
       {\vspace{5.0mm}\headerquotestyle{\@quote\\}\vspace{5.0mm}}
   \end{center}
-  \vspace{5.0mm}
 }
 
 % Define a footer for CV
@@ -737,7 +735,7 @@
 % Define a paragraph for cvletter
 % Usage: \cvparagraph{<paragraph-title>}
 \newcommand{\cvparagraph}{
-  \par\addvspace{2.5ex}
+  \par\addvspace{0.5ex}
   \phantomsection{}
   % \paragraphstyle
   % \color{gray}\vhrulefill{0.9pt}
@@ -747,18 +745,20 @@
 % Define a title of the cover letter
 % Usage: \makelettertitle
 \newcommand*{\makelettertitle}{
-  \vspace{8.4mm}
+  \vspace{3.5mm}
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{12.5cm} R{4cm}}
     \recipienttitlestyle{\@recipientfirstname \hspace{1pt} \@recipientlastname} & \letterdatestyle{\@letterdate}
   \end{tabular*}
+  \vspace{-7.4mm}
   \begin{singlespace}
     \recipientaddressstyle{\@recipientaddress} \\\\
   \end{singlespace}
-  \ifthenelse{\isundefined{\@lettertitle}}
-    {}
-    {\lettertitlestyle{\@lettertitle} \\}
+  % \ifthenelse{\isundefined{\@lettertitle}}
+  %   {}
+  %   {\lettertitlestyle{\@lettertitle} \\}
+  \vspace{-4.4mm}
   \lettertextstyle{\@letteropening \@recipientlastname,}
 }
 
