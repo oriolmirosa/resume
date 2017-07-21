@@ -100,6 +100,8 @@
 \usepackage{graphicx}
 \graphicspath{ {images/} }
 
+\usepackage{verbatimbox}
+
 %-------------------------------------------------------------------------------
 %                Configuration for directory locations
 %-------------------------------------------------------------------------------
@@ -113,7 +115,7 @@
 %-------------------------------------------------------------------------------
 %% Page Layout
 % Configure page margins with geometry
-\geometry{left=1.0in, top=1.0in, right=1.0in, bottom=1.0in, footskip=.5cm}
+\geometry{left=1.0in, top=0.7in, right=1.0in, bottom=1.0in, footskip=.5cm}
 
 %% Header & Footer
 % Set offset to each header and offset
@@ -204,10 +206,10 @@
 \newfontfamily\headersocialfont[
   Path=\@fontdir,
   UprightFont=*-Regular,
-  ItalicFont=*-ThinItalic,
+  ItalicFont=*-Thin,
   BoldFont=*-Bold,
   BoldItalicFont=*-Bold,
-]{Roboto}
+]{BebasNeue}
 
 \newfontfamily\headeraddressfont[
   Path=\@fontdir,
@@ -302,36 +304,36 @@
 % \newcommand*{\headerlastnamestyle}[1]{{\fontsize{24pt}{1em}\headernamefont\addfontfeature{LetterSpace=30.0}\color{blue}\MakeUppercase{#1} }}
 
 \newcommand*{\headerpositionstyle}[1]{{\fontsize{7.6pt}{1em}\bodyfont\scshape\color{text} #1}}
-\newcommand*{\headeraddressstyle}[1]{{\fontsize{8pt}{1em}\headerfont\color{lighttext} #1}}
-\newcommand*{\headersocialstyle}[1]{{\fontsize{6.8pt}{1em}\headersocialfont\color{text} #1}}
+\newcommand*{\headeraddressstyle}[1]{{\fontsize{10pt}{1em}\headerfont\color{lighttext} #1}}
+\newcommand*{\headersocialstyle}[1]{{\fontsize{9pt}{1em}\headersocialfont\color{text} #1}}
 \newcommand*{\headerquotestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\itshape\color{darktext} #1}}
 \newcommand*{\footerstyle}[1]{{\fontsize{8pt}{1em}\footerfont\scshape\color{lighttext} #1}}
-\newcommand*{\sectionstyle}[1]{{\fontsize{16pt}{1em}\headerfont\color{blue} #1}}
+\newcommand*{\sectionstyle}[1]{{\fontsize{18pt}{1em}\headerfont\color{blue} #1}}
 \newcommand*{\subsectionstyle}[1]{{\fontsize{12pt}{1em}\bodyfont\scshape\textcolor{text}{#1}}}
 
 % For elements of entry
-\newcommand*{\entrytitlestyle}[1]{{\fontsize{8pt}{1em}\sectionsubheaderfont\bfseries\color{darktext}\MakeUppercase{#1} }}
-\newcommand*{\entrypositionstyle}[1]{{\fontsize{8pt}{1em}\sectionsubheaderfont\itshape\color{darktext} #1}}
-\newcommand*{\entrydatestyle}[1]{{\fontsize{8pt}{1em}\sectionsubheaderfont\itshape\color{darktext} #1}}
-\newcommand*{\entrylocationstyle}[1]{{\fontsize{8pt}{1em}\sectionsubheaderfont\itshape\slshape\color{darktext} #1}}
-\newcommand*{\descriptionstyle}[1]{{\fontsize{8pt}{1em}\bodyfont\upshape\color{text} #1}}
+\newcommand*{\entrytitlestyle}[1]{{\fontsize{11pt}{1em}\sectionsubheaderfont\bfseries\color{darktext}\MakeUppercase{#1} }}
+\newcommand*{\entrypositionstyle}[1]{{\fontsize{11pt}{1em}\sectionsubheaderfont\itshape\color{darktext} #1}}
+\newcommand*{\entrydatestyle}[1]{{\fontsize{11pt}{1em}\sectionsubheaderfont\itshape\color{darktext} #1}}
+\newcommand*{\entrylocationstyle}[1]{{\fontsize{11pt}{1em}\sectionsubheaderfont\itshape\slshape\color{darktext} #1}}
+\newcommand*{\descriptionstyle}[1]{{\fontsize{11pt}{1.3em}\bodyfont\upshape\color{text} #1}}
 
 % For elements of subentry
-\newcommand*{\subentrytitlestyle}[1]{{\fontsize{8pt}{1em}\bodyfont\mdseries\color{graytext} #1}}
+\newcommand*{\subentrytitlestyle}[1]{{\fontsize{11pt}\bodyfont\mdseries\color{graytext} #1}}
 \newcommand*{\subentrypositionstyle}[1]{{\fontsize{7pt}{1em}\bodyfont\scshape\color{graytext} #1}}
 \newcommand*{\subentrydatestyle}[1]{{\fontsize{7pt}{1em}\bodyfontlight\slshape\color{graytext} #1}}
 \newcommand*{\subentrylocationstyle}[1]{{\fontsize{7pt}{1em}\bodyfontlight\slshape\color{text} #1}}
-\newcommand*{\subdescriptionstyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\upshape\color{text} #1}}
+\newcommand*{\subdescriptionstyle}[1]{{\fontsize{11pt}{1em}\bodyfontlight\upshape\color{text} #1}}
 
 % For elements of honor
-\newcommand*{\honortitlestyle}[1]{{\fontsize{8pt}{1em}\sectionsubheaderfont\color{darktext} #1}}
-\newcommand*{\honorpositionstyle}[1]{{\fontsize{8pt}{1em}\sectionsubheaderfont\bfseries\color{darktext} #1}}
-\newcommand*{\honordatestyle}[1]{{\fontsize{8pt}{1em}\sectionsubheaderfont\color{darktext} #1}}
-\newcommand*{\honorlocationstyle}[1]{{\fontsize{8pt}{1em}\sectionsubheaderfont\slshape\color{darktext} #1}}
+\newcommand*{\honortitlestyle}[1]{{\fontsize{11pt}{1em}\sectionsubheaderfont\color{darktext} #1}}
+\newcommand*{\honorpositionstyle}[1]{{\fontsize{11pt}{1em}\sectionsubheaderfont\bfseries\color{darktext} #1}}
+\newcommand*{\honordatestyle}[1]{{\fontsize{11pt}{1em}\sectionsubheaderfont\color{darktext} #1}}
+\newcommand*{\honorlocationstyle}[1]{{\fontsize{11pt}{1em}\sectionsubheaderfont\slshape\color{darktext} #1}}
 
 % For elements of skill
-\newcommand*{\skilltypestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
-\newcommand*{\skillsetstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\color{text} #1}}
+\newcommand*{\skilltypestyle}[1]{{\fontsize{11pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
+\newcommand*{\skillsetstyle}[1]{{\fontsize{11pt}{1em}\bodyfontlight\color{text} #1}}
 
 % For elements of the cover letter
 \newcommand*{\paragraphstyle}[1]{{\fontsize{14pt}{1em}\bodyfontletter\bfseries\color{text}\@sectioncolor #1}}
@@ -608,7 +610,7 @@
   \phantomsection{}
   \sectionstyle{#1}
   % \color{gray}\vhrulefill{0.9pt}
-  \par\nobreak\addvspace{0.5ex}
+  \par\nobreak\addvspace{0ex}
 }
 
 % Define a subsection for CV
@@ -616,10 +618,12 @@
 \newcommand{\cvsubsection}[1]{
   \phantomsection{}
   \subsectionstyle{#1}
+
 }
 
 % Define an environment for cventry
 \newenvironment{cventries}{
+  \vspace{2mm}
   \begin{center}
 }{
   \end{center}
@@ -629,9 +633,9 @@
 \newcommand*{\cventry}[5]{
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
-
     \ifempty{#1#2#3#4}
-      {\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{12.3cm} R{4.2cm}}
+      {\vspace{-2mm}
+      \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{12.3cm} R{4.2cm}}
         \multicolumn{2}{L{16.5cm}}{\descriptionstyle{#5}} \\
       }
       {\ifempty{#2#3#5}
@@ -650,6 +654,15 @@
         }
       }
   \end{tabular*}
+}
+
+\newcommand*{\cveducation}[4]{
+  \setlength\tabcolsep{0pt}
+  \setlength{\extrarowheight}{0pt}
+  \addvbuffer[0pt 5pt]{\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{12.3cm} R{4.2cm}}
+    \entrytitlestyle{#2} & \entrylocationstyle{#3} \\
+    \entrypositionstyle{#1} & \entrydatestyle{#4}
+  \end{tabular*}}
 }
 
 % Define an environment for cvsubentry
@@ -695,19 +708,19 @@
 
 % Define an environment for cvskill
 \newenvironment{cvskills}{
-  \begin{center}
-    \setlength\tabcolsep{1ex}
-    \setlength{\extrarowheight}{0pt}
-    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} r L{14.7cm}}
+  \begin{justify}
 }{
-    \end{tabular*}
-  \end{center}
+  \end{justify}
+  \vspace{6mm}
 }
+
 % Define a line of cv information(skill)
 % Usage: \cvskill{<type>}{<skillset>}
 \newcommand*{\cvskill}[2]{
-	\skilltypestyle{#1} & \skillsetstyle{#2}
-  \\
+  \begin{justify}
+	 \skilltypestyle{#1} \skillsetstyle{#2} \\
+   \vspace{-6mm}
+  \end{justify}
 }
 
 % Define an environment for cvitems(for cventry)
@@ -715,7 +728,7 @@
   \vspace{-2mm}
   \begin{justify}
   \begin{itemize}[leftmargin=2ex, nosep, noitemsep]
-    \setlength{\parskip}{5pt}
+    \setlength{\parskip}{3pt}
     % \renewcommand{\labelitemi}{\bullet}
     \renewcommand{\labelitemi}{\scriptsize\color{blue}{$\circ$}}
 }{
